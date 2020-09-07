@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        width: 210px;
+        height: 140px;
+        position: relative;
+        perspective: 1000px;
+      }
+
+      @keyframes scroll{
+        0% {
+          transform: translateZ(-288px) rotateY(0deg);
+        }
+        100% {
+          transform: translateZ(-288px) rotateY(360deg);
+        }
+      }
+
+      .carousel {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        animation: scroll 8s infinite;
+      }
+      .carousel div {
+        margin: 0;
+        display: block;
+        position: absolute;
+        width: 186px;
+        height: 116px;
+        left: 10px;
+        top: 10px;
+        border: 1px solid #999;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+      }
+      .carousel div:nth-child(1) {
+        background-color: rgba(214, 37, 51, 0.8);
+        transform: rotateY(0deg) translateZ( 288px ); 
+      }
+      .carousel div:nth-child(2) {
+        background-color: rgba(245, 185, 41, 0.8);
+        transform: rotateY(40deg) translateZ( 288px ); 
+      }
+      .carousel div:nth-child(3) {
+        background-color: rgba(51, 255, 51, 0.8);
+        transform: rotateY(80deg) translateZ( 288px );
+      }
+      .carousel div:nth-child(4) {
+        background-color: rgba(51, 214, 37, 0.8);
+        transform: rotateY(120deg) translateZ( 288px );
+      }
+      .carousel div:nth-child(5) {
+        background-color: rgba(51, 255, 187, 0.8);
+        transform: rotateY(160deg) translateZ( 288px );
+      }
+      .carousel div:nth-child(6) {
+        background-color: rgba(51, 187, 255, 0.8);
+        transform: rotateY(200deg) translateZ( 288px );
+      }
+      .carousel div:nth-child(7) {
+        background-color: rgba(37, 51, 214, 0.8);
+        transform: rotateY(240deg) translateZ( 288px );
+      }
+      .carousel div:nth-child(8) {
+        background-color: rgba(187, 51, 255, 0.8);
+        transform: rotateY(280deg) translateZ( 288px );
+      }
+      .carousel div:nth-child(9) {
+        background-color: rgba(245, 9, 142, 0.8);
+        transform: rotateY(320deg) translateZ( 288px );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="carousel">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+      </div>
+    </div>
+  </body>
+</html>
