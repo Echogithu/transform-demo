@@ -1,7 +1,3 @@
----
-typora-root-url: imgs
----
-
 ## transform示例
 
 ### transform 属性
@@ -16,7 +12,7 @@ typora-root-url: imgs
 
 题目：
 
-![](/3.png)
+![](./imgs/3.png)
 
 思路:
 
