@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrap{
+      margin: 100px;
+    }
+    .row{
+      margin-bottom: 100px;
+    }
+    .box{
+      width: 200px;
+      height: 200px;
+      display: inline-block;
+      background-color: #008000;
+      margin-right: 40px;
+    }
+     .rotateX {
+      transform: rotateX(40deg);
+    }
+    .rotateY {
+      transform: rotateY(40deg);
+    }
+    .rotateZ {
+      transform: rotateZ(40deg);
+    }
+    .tranlateX {
+      transform: translateX(-40px);
+    }
+    .tranlateY {
+      transform: translateY(40px);
+    }
+    .tranlateZ {
+      transform: translateZ(40px);
+    }
+    .tranlateZ2 {
+      transform: translateZ(-40px);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="row">
+      <div class="box origin">origin</div>
+      <div class="box rotateX">rotateX(40deg)</div>
+      <div class="box rotateY">rotateY(40deg)</div>
+      <div class="box rotateZ">rotateZ(40deg)</div>
+    </div>
+    <div class="row">
+      <div class="box tranlateX">translateX:-40px</div>
+      <div class="box tranlateY">translateY:40px</div>
+      <div class="box tranlateZ">translateZ:40px</div>
+      <div class="box tranlateZ2">translateZ:-40px</div>
+    </div>
+  </div>
+</body>
+</html>
