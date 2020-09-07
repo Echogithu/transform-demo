@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .carousel {
+        width: 600px;
+        height: 400px;
+        overflow: hidden;
+      }
+
+      .img-list {
+        position: relative;
+        height: 100%;
+      }
+
+      .img-item {
+        position: absolute;
+        z-index: 0;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .left-img-item {
+        transform-origin: left;
+        transform: perspective(200px) rotateY(10deg) translateZ(0px);
+        z-index: 1;
+        opacity: 1;
+      }
+
+      .main-img-item {
+        z-index: 2;
+        opacity: 1;
+        transform: translateX(250px);
+      }
+
+      .img-item img {
+        width: 300px;
+        height: 400px;
+        vertical-align: bottom;
+      }
+
+      .img-modal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.4),rgba(0,0,0,0.6));
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="carousel">
+        <div class="img-list">
+          <div class="img-item left-img-item">
+            <img src="./imgs/1.jpg" alt="" />
+            <div class="img-modal"></div>
+          </div>
+          <div class="img-item main-img-item">
+            <img src="./imgs/2.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
